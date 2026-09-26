@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f2f5;
+}
+
+header {
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 16px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+input, select {
+        padding: 10px;
+        width: 100%;
+    }
+
+#add-expense {
+    background-color: #28a745;
+    padding: 12px;
+    width: 100%;
+    color: #fff;
+}
+
+form {
+    max-width: 480px;
+    margin: 0 auto; /* auto left and right margin = centered */
+    background-color: #fff;
+    padding: 24px;
+    
+}
+
+#add-expense:hover {
+    background-color: #218838;
+}
+footer #expense-list {
+    padding-left: 16px;
+}
