@@ -43,3 +43,18 @@ form {
 footer #expense-list {
     padding-left: 16px;
 }
+#expense-list {
+    max-width: 480px;
+    margin: 24px auto;
+    padding: 24px;
+    background-color: #fff;
+}
+form h2 {
+    margin-bottom: 8px;
+}
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
