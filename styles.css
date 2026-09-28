@@ -40,10 +40,10 @@ form {
 #add-expense:hover {
     background-color: #218838;
 }
-footer #expense-list {
+footer #expense-list-container {
     padding-left: 16px;
 }
-#expense-list {
+#expense-list-container {
     max-width: 480px;
     margin: 24px auto;
     padding: 24px;
@@ -57,4 +57,13 @@ form h2 {
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid #e0e0e0;
+    gap: 8px;
+}
+.expense-item span {
+    width: 25%;
+}
+#total-display {
+    font-weight: bold;
+    margin-top: 16px;
+    text-align: right;
 }

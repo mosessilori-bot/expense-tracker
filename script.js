@@ -5,8 +5,8 @@ const categoryInput = document.querySelector('#expense-category');
 const dateInput = document.querySelector('#expense-date');
 const submitButton = document.querySelector('#add-expense');
 const expenseList = document.querySelector('#expense-list');
+const totalDisplay = document.querySelector('#total-display');
 const form = document.querySelector('#expense-form');
-
 let expenses = JSON.parse(localStorage.getItem('expenses')) || [];
 expenses.forEach(function(expense) {
     expenseList.innerHTML += `
@@ -17,6 +17,15 @@ expenses.forEach(function(expense) {
         <span>${expense.date}</span>
     </div>`;
 });
+function updateTotal() {
+    console.log('expenses in updateTotal:', expenses);
+    const total = expenses.reduce(function(sum, expense) {
+        return sum + expense.amount;
+    }, 0);
+    totalDisplay.textContent = `Total: ₦${total}`;
+}
+console.log(expenses);
+updateTotal();
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -39,5 +48,5 @@ form.addEventListener('submit', function(event) {
     amountInput.value = '';
     categoryInput.value = '';
     dateInput.value = '';
-    }
-);
+    updateTotal();
+});
